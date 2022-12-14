@@ -6,7 +6,7 @@ jobs:
     name: A job to lock the develop branch
     steps:
       - name: Checkout
-        uses: Fdhansen/BranchProtectionTest@v1.3
+        uses: Fdhansen/BranchProtectionTest@v1.4
       - name: Lock branch step
         uses: ./
         id: lock_branch
