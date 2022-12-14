@@ -6,11 +6,11 @@ jobs:
     name: A job to lock the develop branch
     steps:
       - name: Checkout
-        uses: Fdhansen/BranchProtectionTest@v1.1
+        uses: Fdhansen/BranchProtectionTest@v1.2
       - name: Lock branch step
         uses: ./
         id: lock_branch
-        with: 
+        with:
           auth-token: ${{ secrets.AUTHTOKEN }}
       - name: Get the output time
         run: echo "The time was ${{ steps.lock_branch.outputs.time }}"
