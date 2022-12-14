@@ -13,7 +13,7 @@ try {
       owner: "fdhansen",
       repo: "BranchProtectionTest",
       branch: "develop",
-      required_status_check: null,
+      required_status_checks: null,
       enforce_admins: false,
       required_pull_request_reviews: null,
       restrictions: null,
