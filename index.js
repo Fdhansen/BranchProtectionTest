@@ -2,11 +2,12 @@ const { Octokit } = require("@octokit/rest");
 const core = require("@actions/core");
 const github = require("@actions/github");
 const octokit = new Octokit({
-  auth: "{{ authToken }}",
+  auth: core.getInput("auth-token"),
 });
 
 try {
   console.log("Locking develop branch");
+  console.log(core.getInput("auth-token"));
   octokit.request(
     "PUT /repos/fdhansen/BranchProtectionTest/branches/develop/protection",
     {
