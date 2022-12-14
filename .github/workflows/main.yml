@@ -11,6 +11,6 @@ jobs:
         uses: ./
         id: lock_branch
         with: 
-          auth-token: ${{ AUTHTOKEN }}
+          auth-token: ${{ secrets.AUTHTOKEN }}
       - name: Get the output time
         run: echo "The time was ${{ steps.lock_branch.outputs.time }}"
